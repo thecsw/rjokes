@@ -5,7 +5,7 @@ import praw
 import random
 import time
 
-LIMIT = 200
+LIMIT = 1000
 jokesTitles = []
 jokesTexts = []
 reddit = praw.Reddit(client_id = config.client_id,
@@ -15,10 +15,6 @@ reddit = praw.Reddit(client_id = config.client_id,
                      user_agent = config.user_agent)
 
 telebot = telepot.Bot(config.token)
-
-subreddit = reddit.subreddit('Jokes')
-
-hot_python = subreddit.hot(limit=LIMIT)
 
 def handle(msg):
     user_id = msg['chat']['id']
@@ -34,11 +30,13 @@ def handle(msg):
 
 MessageLoop(telebot, handle).run_as_thread()
 while (1):
+    subreddit = reddit.subreddit('Jokes')
+    hot_python = subreddit.hot(limit=LIMIT)
     jokesTitles = []
     jokesTexts = []
     for submission in hot_python:
         if not submission.stickied:
             jokesTitles.append(submission.title)
             jokesTexts.append(submission.selftext)
-    print('Updated list!')
-    time.sleep(100)
+    print('Updated list! {} {}'.format(len(jokesTitles), len(jokesTexts)))
+    time.sleep(3600)

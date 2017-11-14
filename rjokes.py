@@ -5,7 +5,7 @@ import praw
 import random
 import time
 
-LIMIT = 1000
+LIMIT = 500
 jokesTitles = []
 jokesTexts = []
 reddit = praw.Reddit(client_id = config.client_id,

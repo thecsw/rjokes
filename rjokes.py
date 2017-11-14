@@ -36,6 +36,7 @@ while (1):
     jokesTexts = []
     for submission in hot_python:
         if not submission.stickied:
+            submission.upvote()
             jokesTitles.append(submission.title)
             jokesTexts.append(submission.selftext)
     print('Updated list! {} {}'.format(len(jokesTitles), len(jokesTexts)))

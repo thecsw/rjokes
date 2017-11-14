@@ -22,15 +22,15 @@ telebot = telepot.Bot(config.token)
 def handle(msg):
     user_id = msg['chat']['id']
     command = msg['text']
-    name = msg['chat']['first_name']
-    if command == '/joke':
+    #name = msg['chat']['first_name']
+    if command == '/joke' or command == '/joke@rjokes_bot':
         joke = random.randint(1, LIMIT-1)
         telebot.sendChatAction(user_id, 'typing')
         telebot.sendMessage(user_id, jokesTitles[joke])
         time.sleep(1)
         telebot.sendChatAction(user_id, 'typing')
         telebot.sendMessage(user_id, jokesTexts[joke])
-        print(name)
+        #print(name)
         print(user_id)
         print(jokesTitles[joke])
         print(jokesTexts[joke])

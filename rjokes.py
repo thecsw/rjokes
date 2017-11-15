@@ -6,6 +6,7 @@ import random
 import time
 
 LIMIT = 500
+counter = 0
 jokesTitles = []
 jokesTexts = []
 for i in range(0, LIMIT):
@@ -20,6 +21,7 @@ reddit = praw.Reddit(client_id = config.client_id,
 telebot = telepot.Bot(config.token)
 
 def handle(msg):
+    global counter
     user_id = msg['chat']['id']
     command = msg['text']
     if command == '/joke' or command == '/joke@rjokes_bot':
@@ -33,6 +35,8 @@ def handle(msg):
         print(jokesTitles[joke])
         print(jokesTexts[joke])
         print('\n')
+        counter+=1
+        print(counter)
     if command == '/help' or command == '/help@rjokes_bot':
         telebot.sendMessage(user_id, 'Thank you for using the bot that just delivers!\n\
         if you have any questions or suggestions, please dm me on @thecsw')

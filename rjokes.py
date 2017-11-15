@@ -22,7 +22,6 @@ telebot = telepot.Bot(config.token)
 def handle(msg):
     user_id = msg['chat']['id']
     command = msg['text']
-    #name = msg['chat']['first_name']
     if command == '/joke' or command == '/joke@rjokes_bot':
         joke = random.randint(1, LIMIT-1)
         telebot.sendChatAction(user_id, 'typing')
@@ -30,12 +29,15 @@ def handle(msg):
         time.sleep(1)
         telebot.sendChatAction(user_id, 'typing')
         telebot.sendMessage(user_id, jokesTexts[joke])
-        #print(name)
         print(user_id)
         print(jokesTitles[joke])
         print(jokesTexts[joke])
         print('\n')
+    if command == '/help' or command == '/help@rjokes_bot':
+        telebot.sendMessage(user_id, 'Thank you for using the bot that just delivers!\n\
+        if you have any questions or suggestions, please dm me on @thecsw')
 
+        
 MessageLoop(telebot, handle).run_as_thread()
 while (1):
     subreddit = reddit.subreddit('Jokes')

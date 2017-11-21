@@ -29,9 +29,10 @@ def handle(msg):
     if command == '/joke' or command == '/joke@rjokes_bot':
         joke = random.randint(1, LIMIT-1)
         telebot.sendChatAction(user_id, 'typing')
+        time.sleep(1)
         telebot.sendMessage(user_id, jokesTitles[joke])
-        time.sleep(2)
         telebot.sendChatAction(user_id, 'typing')
+        time.sleep(2)
         telebot.sendMessage(user_id, jokesTexts[joke])
         print(user_id)
         print(jokesTitles[joke])

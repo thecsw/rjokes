@@ -5,7 +5,7 @@ import praw
 import random
 import time
 
-LIMIT = 500
+LIMIT = 100
 counter = 0
 sub = 'Jokes'
 jokesTitles = []
@@ -49,7 +49,8 @@ def handle(msg):
 MessageLoop(telebot, handle).run_as_thread()
 while (1):
     subreddit = reddit.subreddit(sub)
-    hot_python = subreddit.hot(limit=LIMIT)
+    #hot_python = subreddit.hot(limit=LIMIT)
+    hot_python = subreddit.top('all', limit=LIMIT)
     for submission in hot_python:
         if not submission.stickied:
             jokesTitles.pop(0)

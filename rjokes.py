@@ -1,10 +1,15 @@
+# Fill your Reddit and Telegram API in example.config.py and rename it to config.py
 import config
+# Telegram library for telegram bot
 import telepot
+# Library to get new message
 from telepot.loop import MessageLoop
+# Library to interact with Reddit's API
 import praw
+# Get random jokes
 import random
 import time
-
+# Limit of jokes
 LIMIT = 100
 counter = 0
 sub = 'Jokes'
@@ -51,6 +56,8 @@ while (1):
     subreddit = reddit.subreddit(sub)
     #hot_python = subreddit.hot(limit=LIMIT)
     hot_python = subreddit.top('all', limit=LIMIT)
+    # Updating jokes by popping at the beginning of the list and adding new one at the end
+    # Maybe there is a separate function in python to do this?
     for submission in hot_python:
         if not submission.stickied:
             jokesTitles.pop(0)

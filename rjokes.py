@@ -56,7 +56,7 @@ MessageLoop(telebot, handle).run_as_thread()
 while (1):
     subreddit = reddit.subreddit(sub)
     #hot_python = subreddit.hot(limit=LIMIT)
-    hot_python = subreddit.top('all', limit=LIMIT)
+    hot_python = subreddit.top('day', limit=LIMIT)
     # Updating jokes by popping at the beginning of the list and adding new one at the end
     # Maybe there is a separate function in python to do this?
     for submission in hot_python:

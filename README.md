@@ -34,6 +34,7 @@ nano config.py
 ```
 
 Now here, you can use any text editor you like. When opening the file you will see this
+
 ```python
 #This is for reddit
 client_id = 'take it from your account\'s preferences'
@@ -44,3 +45,56 @@ user_agent = 'something'
 #This is for telegram
 token = 'YOUR TELEGRAM API KEY'
 ```
+
+So what will you need to do now is to get you Reddit API details from [here](https://reddit.com) and your Telegram API token from [BotFather](https://telegram.me/botfather)
+
+After filling out the keys, save and exit.
+
+## Deployment
+
+Config file is ready and you are good to go!
+
+Just run this
+
+```bash
+python rjokes.py
+```
+
+That is everything. The script now just runs and any user that is connected to your Telegram bot can request a joke via the /joke command.
+
+## Source code
+
+I know that the script is little bit messy, I tried. Simple and small, but it works!
+
+Now, I want to give little insight on the code. If you want to take posts from any other subreddit, in the main source file rjokes.py, change this variable's value to any subrreddit you like
+
+```python
+sub = 'Jokes' # Means it will extract posts from reddit.com/r/Jokes
+```
+
+Also, this script takes only the best jokes of the last 24 hours and updates them every hour. If you want to change the source of jokes, change this line
+
+```python
+hot_python = subreddit.top('all', limit=LIMIT)
+```
+
+LIMIT is the amount of posts to extract
+
+Well and also the time interval is in seconds
+
+```python
+time.sleep(3600)
+```
+
+## Built With
+
+* [telepot](https://github.com/nickoala/telepot) - python framework for Telegram Bot API.
+* [praw](https://github.com/praw-dev/praw) - Python Reddit API Wrapper.
+
+## Authors
+
+* **Sagindyk Urazayev** - *Initial work* - [PurpleBooth](https://github.com/thecsw)
+
+## License
+
+This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details

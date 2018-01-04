@@ -93,8 +93,8 @@ time.sleep(3600)
 
 ## Authors
 
-* **Sagindyk Urazayev** - *Initial work* - [PurpleBooth](https://github.com/thecsw)
+* **Sagindyk Urazayev** - *Initial work* - [thecsw](https://github.com/thecsw)
 
 ## License
 
-This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the The GNU General Public License - see the [LICENSE.md](https://github.com/thecsw/rjokes/LICENSE.md) file for details

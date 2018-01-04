@@ -20,10 +20,27 @@ sudo pip install praw
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Nothing too complicated. The source code is written in python, so no worries.
 
-Say what the step will be
+The only thing that needs to be done before execution is the config profile. In the config profile you should fill your Reddit API details and Telegram Bot's unique API key.
+
+For that please follow these steps
 
 ```
-Give the example
+git clone https://github.com/thecsw/rjokes
+cd rjokes
+mv example.config.py config.py
+nano config.py
+```
+
+Now here, you can use any text editor you like. When opening the file you will see this
+```python
+#This is for reddit
+client_id = 'take it from your account\'s preferences'
+client_secret = 'take it from your account\'s preferences'
+username = 'username'
+password = 'password'
+user_agent = 'something'
+#This is for telegram
+token = 'YOUR TELEGRAM API KEY'
 ```

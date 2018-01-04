@@ -1,11 +1,16 @@
-Bot that queries r/Jokes for hottest jokes and sends them via telegram
-To let it work, you will need :
-telepot - https://github.com/nickoala/telepot
-praw - https://praw.readthedocs.io/en/latest/
+# rjokes
 
-Configure:
-add your keys in example.config.py
-rename it to config.py
+Telegram bot that queries subreddit r/Jokes from Reddit (reddit.com/r/Jokes) for the best jokes of the day (can be modified) and then sends these jokes via telegram chat with a user.
 
-Execute by:
-python rjokes.py
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+What things you need to install the software and how to install them
+
+```
+sudo pip install telepot
+sudo pip install praw
+```

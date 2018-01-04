@@ -75,7 +75,7 @@ sub = 'Jokes' # Means it will extract posts from reddit.com/r/Jokes
 Also, this script takes only the best jokes of the last 24 hours and updates them every hour. If you want to change the source of jokes, change this line
 
 ```python
-hot_python = subreddit.top('all', limit=LIMIT)
+hot_python = subreddit.top('day', limit=LIMIT)
 ```
 
 LIMIT is the amount of posts to extract

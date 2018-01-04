@@ -97,4 +97,4 @@ time.sleep(3600)
 
 ## License
 
-This project is licensed under the The GNU General Public License - see the [LICENSE.md](https://github.com/thecsw/rjokes/LICENSE.md) file for details
+This project is licensed under the The GNU General Public License - see the [LICENSE.md](https://github.com/thecsw/rjokes/blob/master/LICENSE) file for details

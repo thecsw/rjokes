@@ -46,7 +46,7 @@ user_agent = 'something'
 token = 'YOUR TELEGRAM API KEY'
 ```
 
-So what will you need to do now is to get you Reddit API details from [here](https://reddit.com) and your Telegram API token from [BotFather](https://telegram.me/botfather)
+So what will you need to do now is to get your Reddit API details from [here](https://reddit.com) and your Telegram API token from [BotFather](https://telegram.me/botfather)
 
 After filling out the keys, save and exit.
 

@@ -14,6 +14,15 @@ What things you need to install the software and how to install them
 sudo pip install telepot
 sudo pip install praw
 ```
+
+OR
+
+You can install them by using requirements file
+
+```
+pip install -r requirements.txt
+```
+
 [telepot](https://github.com/nickoala/telepot) is a python framework for Telegram Bot API. This package will be used to connect to Telegram API and to communicate with users over the internet.
 
 [praw](https://github.com/praw-dev/praw) is Python Reddit API Wrapper. This will be the main and only package to connect to Reddit's API and extract desired data.
